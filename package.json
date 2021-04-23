@@ -1,0 +1,23 @@
+{
+  "name": "team-html-generator",
+  "version": "1.0.0",
+  "description": "\"allows the team to see a description of each other\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanWichmann/Team-HTML-Generator.git"
+  },
+  "author": "nathan w",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanWichmann/Team-HTML-Generator/issues"
+  },
+  "homepage": "https://github.com/NathanWichmann/Team-HTML-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  }
+}
