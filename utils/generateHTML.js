@@ -1,3 +1,4 @@
+
 const generateHTML = (answers) =>
   `<!DOCTYPE html>
 <html lang="en">
