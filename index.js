@@ -34,7 +34,7 @@ const continueBuild = () => {
         promptEngineer();
       break;
       default:
-        buildTemp();
+        generateTeam();
     }
   })
 }
@@ -193,5 +193,18 @@ const promptEngineer = () => {
       continueBuild()
     })
   };
+ 
+//   const init = () => {
+//   promptUser()
+//     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+//     .then(() => console.log('Successfully wrote to index.html'))
+//     .catch((err) => console.error(err));
+// };
 
+
+function generateTeam() {
+   fs.writeFileAsync('index.html', generateHTML(response))
+  .then(() => console.log('Successfully wrote to index.html'))
+  .catch((err) => console.error(err));
+}
   init();
