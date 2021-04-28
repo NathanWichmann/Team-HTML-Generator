@@ -1,11 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateHTML = require('./utils/generateHTML');
+// const generateHTML = require('./utils/generateHTML');
 const Manager = require('./library/Manager')
 const Engineer = require('./library/Engineer')
 const Intern = require('./library/Intern')
-const buildTemp = require('./library/buildTemp')
+const generateHTML = require('./library/buildTemp')
 
 const team = [];
 // create writeFile function using promises instead of a callback function
@@ -28,13 +28,13 @@ const continueBuild = () => {
   .then((answer) => {
     switch(answer.teamMember){
       case 'Intern':
-        promptIntern();
-        break;
+        return promptIntern();
       case 'Engineer':
-        promptEngineer();
-      break;
+        return promptEngineer();
       default:
-        generateTeam();
+        console.log("Writing your file!")
+        return renderTeamPage(team)
+        // renderTeamPage(answer);
     }
   })
 }
@@ -86,14 +86,9 @@ const promptUserManager = () => {
     continueBuild()
   })
 };
-
-
-// Bonus using writeFileAsync as a promise
 const init = () => {
-  promptUserManager()
-    // .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-    // .then(() => console.log('Successfully wrote to index.html'))
-    // .catch((err) => console.error(err));
+ promptUserManager()
+    
 };
 
 
@@ -194,17 +189,20 @@ const promptEngineer = () => {
     })
   };
  
-//   const init = () => {
-//   promptUser()
-//     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-//     .then(() => console.log('Successfully wrote to index.html'))
-//     .catch((err) => console.error(err));
-// };
+// const init = () => {
+//    promptUserManager()
+//      .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+//      .then(() => console.log('Successfully wrote to index.html'))
+//      .catch((err) => console.error(err));
+//  };
+
+//  init()
 
 
-function generateTeam() {
-   fs.writeFileAsync('index.html', generateHTML(response))
-  .then(() => console.log('Successfully wrote to index.html'))
-  .catch((err) => console.error(err));
+function renderTeamPage(response) {
+ fs.writeFileAsync('index.html', generateHTML(response))
+   .catch(err => console.error(err))
+  //  console.log('index.html', generateHTML(response))
+
 }
-  init();
+init();
