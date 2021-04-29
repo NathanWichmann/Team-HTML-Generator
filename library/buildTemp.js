@@ -64,7 +64,7 @@ function generateManger(member) {
 <div class="card-body bg-light">
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${member.getId()}</li>
-  <li class="list-group-item">Email: ${member.getEmail()}</li>
+  <li class="list-group-item">Email: <a href="mailto:">${member.getEmail()}</a></li>
   <li class="list-group-item">Office Number: ${member.getOfficeNumber()}</li>
 </ul>
 </div>
@@ -76,34 +76,40 @@ function generateManger(member) {
 function generateEngineer(member) {
   // console.log("inside the engineer function", member)
   return `
+  <div class="col-md-4 py-2">
   <div class="card employee-card" style="width: 18rem;">
-<div class="card-header bg-primary text-white">
+<div class="card-header bg-primary text-white shadow">
   <h1 class="card-title"> ${member.getName()}</h1>
-  <h1 class="card-title"></h1>
   <h2 class="card-name"> <i class="fas fa-glasses"></i> ${member.getRole()}</h2>
 </div>
+<div class="card-body bg-light">
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${member.getId()}</li>
-  <li class="list-group-item">Email: ${member.getEmail()}</li>
-  <li class="list-group-item">Github User Name: ${member.getGitHub()}</li>
+  <li class="list-group-item">Email: <a href="mailto:">${member.getEmail()}</a></li>
+  <li class="list-group-item">Github User Name:  <a href="http://github.com/undefined/">${member.getGitHub()}</a></li>
 </ul>
+</div>
+</div>
 </div>
   `
 }
 
 function generateIntern(member) {
   return `
+  <div class="col-md-4 py-2">
   <div class="card employee-card" style="width: 18rem;">
-<div class="card-header bg-primary text-white">
+<div class="card-header bg-primary text-white shadow">
   <h1 class="card-title">${member.getName()}</h1>
-  <h1 class="card-title"></h1>
   <h2 class="card-name"> <i class="fas fa-graduation-cap"></i> ${member.getRole()}</h2>
 </div>
+<div class="card-body bg-light">
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${member.getId()}</li>
-  <li class="list-group-item">Email: ${member.getEmail()}</li>
+  <li class="list-group-item">Email: <a href="mailto:">${member.getEmail()}</a></li>
   <li class="list-group-item">School: ${member.getSchool()}</li>
 </ul>
+</div>
+</div>
 </div>
   `
 }
