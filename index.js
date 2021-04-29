@@ -200,9 +200,9 @@ const promptEngineer = () => {
 
 
 function renderTeamPage(response) {
- fs.writeFileAsync('index.html', generateHTML(response))
+ writeFileAsync('index.html', generateHTML(response))
    .catch(err => console.error(err))
-  //  console.log('index.html', generateHTML(response))
+   console.log('index.html', generateHTML(response))
 
 }
 init();
