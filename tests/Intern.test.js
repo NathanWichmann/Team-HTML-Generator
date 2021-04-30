@@ -1,5 +1,5 @@
 const Intern = require('../library/Intern');
-
+//this tests the intern and the name, id, email and school 
 describe('employee', () => {
   describe('Instantiate', () => {
     // Positive test
@@ -27,12 +27,20 @@ describe('employee', () => {
     // Assert
     expect(e.email).toBe(test);
   });
-  it("should create an idwith the constructor", () => {
+  it("should create an id with the constructor", () => {
     // Arrange
     const test = "12345";
     const e = new Intern('nathan', 'email', '12345' );
 
     // Assert
     expect(e.id).toBe(test);
+  });
+  it("should create school with the constructor", () => {
+    // Arrange
+    const test = "school";
+    const e = new Intern('nathan', 'email', 'id', 'school' );
+
+    // Assert
+    expect(e.school).toBe(test);
   });
 });

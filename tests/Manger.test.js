@@ -41,6 +41,6 @@ describe('employee', () => {
     const e = new Manager('nathan', test, test , test );
 
     // Assert
-    expect(e.id).toBe(test);
+    expect(e.officeNumber).toBe(test);
   });
 });

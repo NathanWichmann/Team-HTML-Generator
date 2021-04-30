@@ -1,5 +1,5 @@
 const Employee = require("./Employee")
-
+//this creates the intern and uses the name, email and id from the employee with the super and creates the school function
 class Intern extends Employee {
     constructor(name, email, id, school) {
         super(name, email, id);

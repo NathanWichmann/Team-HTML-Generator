@@ -1,5 +1,5 @@
 //generate the team 
-
+//this is the second array created that takes the information from the team array and combines them to generate the roles of eaach employee
 const teamMemberHtml = [];
 
 
@@ -19,6 +19,7 @@ const generateHTML = team => {
 
   }
   // return teamMemberHtml.join('')
+  //this is the syling required to run the page, it is joined together with the 3 other functions below to greate the entire team, without the join it would be seperate pieces
   return `
   <!DOCTYPE html>
       <html lang="en">
@@ -46,13 +47,14 @@ const generateHTML = team => {
   </div>
   <div class="container">
       <div class="row justify-content-center" id="cards">
+      
    ${teamMemberHtml.join('')}
   </body>
   </html>
 
   `
 };
-
+//this function combines all the info from the teammemberhtml array and displays the responses in the html 
 function generateManger(member) {
   return `
   <div class="col-md-4 py-2">
@@ -72,7 +74,7 @@ function generateManger(member) {
 </div>
   `
 }
-
+//this function combines all the info from the teammemberhtml array and displays the responses in the html 
 function generateEngineer(member) {
   // console.log("inside the engineer function", member)
   return `
@@ -93,7 +95,7 @@ function generateEngineer(member) {
 </div>
   `
 }
-
+//this function combines all the info from the teammemberhtml array and displays the responses in the html 
 function generateIntern(member) {
   return `
   <div class="col-md-4 py-2">

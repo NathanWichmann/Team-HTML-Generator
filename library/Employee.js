@@ -1,3 +1,4 @@
+//this creates the class of employee and constructs the bases for the other 3 name email id 
 class Employee {
     constructor(name, email, id) {
         this.name = name;

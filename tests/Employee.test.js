@@ -1,5 +1,5 @@
 const Employee = require('../library/Employee');
-
+//this tests the employee class and its constructors, tests the employee, name, id and email 
 describe('employee', () => {
   describe('Instantiate', () => {
     // Positive test

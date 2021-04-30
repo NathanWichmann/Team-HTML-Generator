@@ -1,5 +1,5 @@
 const Engineer = require('../library/Engineer');
-
+//this tests the engineer code of name, id, email and github user name 
 describe('employee', () => {
   describe('Instantiate', () => {
     // Positive test
