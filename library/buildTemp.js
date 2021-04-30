@@ -16,7 +16,7 @@ const generateHTML = team => {
     if (team[i].getRole() === "Intern") {
       teamMemberHtml.push(generateIntern(team[i]));
     }
-    
+
   }
   // return teamMemberHtml.join('')
   return `
